@@ -6,7 +6,7 @@ odal_rune,synthetic (generated in-code with PIL),none needed - original code-dra
 wolfsangel,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
 celtic_cross,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
 easy_negative,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
-imperial_war_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code
+imperial_war_flag,https://commons.wikimedia.org/wiki/File:War_Ensign_of_Germany_(1933%E2%80%931935).svg,Public domain (German copyright law section 5(1) - official work),"Downloaded 2026-11-03. Uploaded by Greentubing 2006-01-31, current version by Fry1989 2010-09-08."
 islamic_state_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code
 hamas_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code
 hezbollah_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code

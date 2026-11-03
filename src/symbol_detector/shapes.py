@@ -153,6 +153,15 @@ def grave_cross() -> Image.Image:
     return img
 
 
+def plain_tricolor() -> Image.Image:
+    """Hard negative for imperial_war_flag: same black/white/red bands, no iron cross."""
+    img = Image.new("RGBA", (SIZE, SIZE), (255, 255, 255, 255))
+    draw = ImageDraw.Draw(img)
+    draw.rectangle([0, 0, SIZE, SIZE // 3], fill="black")
+    draw.rectangle([0, 2 * SIZE // 3, SIZE, SIZE], fill=(221, 0, 0))
+    return img
+
+
 SYMBOLS: dict[str, dict[str, Callable[[], Image.Image]]] = {
     "swastika": {"positive": swastika, "hard_negative": swastika_religious},
     "ss_runes": {"positive": ss_runes, "hard_negative": lightning_warning},

@@ -299,6 +299,56 @@ data/images/celtic_cross/hard_negative/celtic_cross_hard_negative_small_021.jpg,
 data/images/celtic_cross/hard_negative/celtic_cross_hard_negative_occluded_022.jpg,celtic_cross,hard_negative,occluded,"synthetic (generated, no license needed)"
 data/images/celtic_cross/hard_negative/celtic_cross_hard_negative_on_photo_023.jpg,celtic_cross,hard_negative,on_photo,"synthetic (generated, no license needed)"
 data/images/celtic_cross/hard_negative/celtic_cross_hard_negative_color_024.jpg,celtic_cross,hard_negative,color,"synthetic (generated, no license needed)"
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_rotated_000.jpg,imperial_war_flag,positive,rotated,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_small_001.jpg,imperial_war_flag,positive,small,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_occluded_002.jpg,imperial_war_flag,positive,occluded,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_003.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_004.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_rotated_005.jpg,imperial_war_flag,positive,rotated,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_small_006.jpg,imperial_war_flag,positive,small,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_occluded_007.jpg,imperial_war_flag,positive,occluded,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_008.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_009.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_rotated_010.jpg,imperial_war_flag,positive,rotated,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_small_011.jpg,imperial_war_flag,positive,small,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_occluded_012.jpg,imperial_war_flag,positive,occluded,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_013.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_014.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_rotated_015.jpg,imperial_war_flag,positive,rotated,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_small_016.jpg,imperial_war_flag,positive,small,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_occluded_017.jpg,imperial_war_flag,positive,occluded,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_018.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_019.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_rotated_020.jpg,imperial_war_flag,positive,rotated,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_small_021.jpg,imperial_war_flag,positive,small,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_occluded_022.jpg,imperial_war_flag,positive,occluded,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_023.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/positive/imperial_war_flag_positive_on_photo_024.jpg,imperial_war_flag,positive,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_rotated_000.jpg,imperial_war_flag,hard_negative,rotated,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_small_001.jpg,imperial_war_flag,hard_negative,small,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_occluded_002.jpg,imperial_war_flag,hard_negative,occluded,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_003.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_004.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_rotated_005.jpg,imperial_war_flag,hard_negative,rotated,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_small_006.jpg,imperial_war_flag,hard_negative,small,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_occluded_007.jpg,imperial_war_flag,hard_negative,occluded,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_008.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_009.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_rotated_010.jpg,imperial_war_flag,hard_negative,rotated,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_small_011.jpg,imperial_war_flag,hard_negative,small,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_occluded_012.jpg,imperial_war_flag,hard_negative,occluded,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_013.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_014.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_rotated_015.jpg,imperial_war_flag,hard_negative,rotated,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_small_016.jpg,imperial_war_flag,hard_negative,small,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_occluded_017.jpg,imperial_war_flag,hard_negative,occluded,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_018.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_019.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_rotated_020.jpg,imperial_war_flag,hard_negative,rotated,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_small_021.jpg,imperial_war_flag,hard_negative,small,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_occluded_022.jpg,imperial_war_flag,hard_negative,occluded,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_023.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_024.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
 data/images/easy_negative/easy_negative_000.jpg,none,easy_negative,random_shape,"synthetic (generated, no license needed)"
 data/images/easy_negative/easy_negative_001.jpg,none,easy_negative,random_shape,"synthetic (generated, no license needed)"
 data/images/easy_negative/easy_negative_002.jpg,none,easy_negative,random_shape,"synthetic (generated, no license needed)"

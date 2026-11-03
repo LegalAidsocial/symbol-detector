@@ -12,17 +12,31 @@ import csv
 import math
 import random
 from pathlib import Path
+from typing import Callable
 
 import numpy as np
 from PIL import Image, ImageDraw
 
 from symbol_detector.backgrounds import random_background
-from symbol_detector.shapes import SIZE, SYMBOLS
+from symbol_detector.shapes import SIZE, SYMBOLS, plain_tricolor
 
 OUT_DIR = Path("data/images")
 MANIFEST_PATH = Path("data/manifest.csv")
+RAW_LICENSED_DIR = Path("data/raw_licensed")
 VARIANTS_PER_CLASS = 25  # positive + hard_negative, per symbol
 EASY_NEGATIVES = 200
+
+# Real licensed reference images: symbol -> (positive image loader, hard negative builder).
+# Not recolored like the drawn line-art symbols - a real flag's colors are part of what
+# makes it that symbol, so changing them isn't a realistic augmentation.
+REAL_SYMBOLS: dict[str, dict[str, Callable[[], Image.Image]]] = {
+    "imperial_war_flag": {
+        "positive": lambda: Image.open(RAW_LICENSED_DIR / "imperial_war_flag" / "original.png").convert(
+            "RGBA"
+        ),
+        "hard_negative": plain_tricolor,
+    },
+}
 
 COLORS = [(0, 0, 0), (255, 255, 255), (200, 0, 0), (0, 0, 150), (40, 40, 40)]
 
@@ -59,8 +73,8 @@ def composite_on_background(img: Image.Image, scale: float = 1.0) -> Image.Image
     return bg.convert("RGB")
 
 
-def make_variant(base: Image.Image, kind: str) -> Image.Image:
-    img = recolor(base, random.choice(COLORS))
+def make_variant(base: Image.Image, kind: str, allow_recolor: bool = True) -> Image.Image:
+    img = recolor(base, random.choice(COLORS)) if allow_recolor else base.resize((SIZE, SIZE))
     if kind == "rotated":
         img = img.rotate(random.choice([15, 30, 60, 90, 120, 180, -20, -45]), expand=False)
         return composite_on_background(img)
@@ -107,26 +121,33 @@ def main() -> None:
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     rows = []
 
-    for symbol, kinds in SYMBOLS.items():
-        for label, builder in kinds.items():
-            folder = OUT_DIR / symbol / label
-            folder.mkdir(parents=True, exist_ok=True)
-            base = builder()
-            variant_kinds = ["rotated", "small", "occluded", "on_photo", "color"]
-            for i in range(VARIANTS_PER_CLASS):
-                kind = variant_kinds[i % len(variant_kinds)]
-                out = make_variant(base, kind)
-                fname = f"{symbol}_{label}_{kind}_{i:03d}.jpg"
-                out.convert("RGB").save(folder / fname, quality=90)
-                rows.append(
-                    {
-                        "path": str((folder / fname).as_posix()),
-                        "symbol": symbol,
-                        "label": label,
-                        "variant": kind,
-                        "source": "synthetic (generated, no license needed)",
-                    }
+    sources = [(SYMBOLS, True, "synthetic (generated, no license needed)"), (REAL_SYMBOLS, False, None)]
+    for symbol_dict, allow_recolor, fixed_source in sources:
+        for symbol, kinds in symbol_dict.items():
+            for label, builder in kinds.items():
+                folder = OUT_DIR / symbol / label
+                folder.mkdir(parents=True, exist_ok=True)
+                base = builder()
+                variant_kinds = (
+                    ["rotated", "small", "occluded", "on_photo", "color"]
+                    if allow_recolor
+                    else ["rotated", "small", "occluded", "on_photo", "on_photo"]
                 )
+                source = fixed_source or "see data/licenses.csv"
+                for i in range(VARIANTS_PER_CLASS):
+                    kind = variant_kinds[i % len(variant_kinds)]
+                    out = make_variant(base, kind, allow_recolor=allow_recolor)
+                    fname = f"{symbol}_{label}_{kind}_{i:03d}.jpg"
+                    out.convert("RGB").save(folder / fname, quality=90)
+                    rows.append(
+                        {
+                            "path": str((folder / fname).as_posix()),
+                            "symbol": symbol,
+                            "label": label,
+                            "variant": kind,
+                            "source": source,
+                        }
+                    )
 
     neg_folder = OUT_DIR / "easy_negative"
     neg_folder.mkdir(parents=True, exist_ok=True)
