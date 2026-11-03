@@ -349,6 +349,206 @@ data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_smal
 data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_occluded_022.jpg,imperial_war_flag,hard_negative,occluded,see data/licenses.csv
 data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_023.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
 data/images/imperial_war_flag/hard_negative/imperial_war_flag_hard_negative_on_photo_024.jpg,imperial_war_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_rotated_000.jpg,islamic_state_flag,positive,rotated,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_small_001.jpg,islamic_state_flag,positive,small,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_occluded_002.jpg,islamic_state_flag,positive,occluded,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_003.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_004.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_rotated_005.jpg,islamic_state_flag,positive,rotated,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_small_006.jpg,islamic_state_flag,positive,small,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_occluded_007.jpg,islamic_state_flag,positive,occluded,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_008.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_009.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_rotated_010.jpg,islamic_state_flag,positive,rotated,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_small_011.jpg,islamic_state_flag,positive,small,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_occluded_012.jpg,islamic_state_flag,positive,occluded,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_013.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_014.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_rotated_015.jpg,islamic_state_flag,positive,rotated,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_small_016.jpg,islamic_state_flag,positive,small,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_occluded_017.jpg,islamic_state_flag,positive,occluded,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_018.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_019.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_rotated_020.jpg,islamic_state_flag,positive,rotated,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_small_021.jpg,islamic_state_flag,positive,small,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_occluded_022.jpg,islamic_state_flag,positive,occluded,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_023.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/positive/islamic_state_flag_positive_on_photo_024.jpg,islamic_state_flag,positive,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_rotated_000.jpg,islamic_state_flag,hard_negative,rotated,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_small_001.jpg,islamic_state_flag,hard_negative,small,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_occluded_002.jpg,islamic_state_flag,hard_negative,occluded,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_003.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_004.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_rotated_005.jpg,islamic_state_flag,hard_negative,rotated,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_small_006.jpg,islamic_state_flag,hard_negative,small,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_occluded_007.jpg,islamic_state_flag,hard_negative,occluded,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_008.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_009.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_rotated_010.jpg,islamic_state_flag,hard_negative,rotated,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_small_011.jpg,islamic_state_flag,hard_negative,small,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_occluded_012.jpg,islamic_state_flag,hard_negative,occluded,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_013.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_014.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_rotated_015.jpg,islamic_state_flag,hard_negative,rotated,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_small_016.jpg,islamic_state_flag,hard_negative,small,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_occluded_017.jpg,islamic_state_flag,hard_negative,occluded,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_018.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_019.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_rotated_020.jpg,islamic_state_flag,hard_negative,rotated,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_small_021.jpg,islamic_state_flag,hard_negative,small,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_occluded_022.jpg,islamic_state_flag,hard_negative,occluded,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_023.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/islamic_state_flag/hard_negative/islamic_state_flag_hard_negative_on_photo_024.jpg,islamic_state_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_rotated_000.jpg,hamas_flag,positive,rotated,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_small_001.jpg,hamas_flag,positive,small,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_occluded_002.jpg,hamas_flag,positive,occluded,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_003.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_004.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_rotated_005.jpg,hamas_flag,positive,rotated,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_small_006.jpg,hamas_flag,positive,small,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_occluded_007.jpg,hamas_flag,positive,occluded,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_008.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_009.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_rotated_010.jpg,hamas_flag,positive,rotated,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_small_011.jpg,hamas_flag,positive,small,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_occluded_012.jpg,hamas_flag,positive,occluded,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_013.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_014.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_rotated_015.jpg,hamas_flag,positive,rotated,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_small_016.jpg,hamas_flag,positive,small,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_occluded_017.jpg,hamas_flag,positive,occluded,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_018.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_019.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_rotated_020.jpg,hamas_flag,positive,rotated,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_small_021.jpg,hamas_flag,positive,small,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_occluded_022.jpg,hamas_flag,positive,occluded,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_023.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/positive/hamas_flag_positive_on_photo_024.jpg,hamas_flag,positive,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_rotated_000.jpg,hamas_flag,hard_negative,rotated,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_small_001.jpg,hamas_flag,hard_negative,small,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_occluded_002.jpg,hamas_flag,hard_negative,occluded,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_003.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_004.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_rotated_005.jpg,hamas_flag,hard_negative,rotated,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_small_006.jpg,hamas_flag,hard_negative,small,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_occluded_007.jpg,hamas_flag,hard_negative,occluded,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_008.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_009.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_rotated_010.jpg,hamas_flag,hard_negative,rotated,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_small_011.jpg,hamas_flag,hard_negative,small,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_occluded_012.jpg,hamas_flag,hard_negative,occluded,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_013.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_014.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_rotated_015.jpg,hamas_flag,hard_negative,rotated,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_small_016.jpg,hamas_flag,hard_negative,small,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_occluded_017.jpg,hamas_flag,hard_negative,occluded,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_018.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_019.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_rotated_020.jpg,hamas_flag,hard_negative,rotated,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_small_021.jpg,hamas_flag,hard_negative,small,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_occluded_022.jpg,hamas_flag,hard_negative,occluded,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_023.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hamas_flag/hard_negative/hamas_flag_hard_negative_on_photo_024.jpg,hamas_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_rotated_000.jpg,pkk_flag,positive,rotated,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_small_001.jpg,pkk_flag,positive,small,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_occluded_002.jpg,pkk_flag,positive,occluded,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_003.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_004.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_rotated_005.jpg,pkk_flag,positive,rotated,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_small_006.jpg,pkk_flag,positive,small,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_occluded_007.jpg,pkk_flag,positive,occluded,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_008.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_009.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_rotated_010.jpg,pkk_flag,positive,rotated,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_small_011.jpg,pkk_flag,positive,small,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_occluded_012.jpg,pkk_flag,positive,occluded,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_013.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_014.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_rotated_015.jpg,pkk_flag,positive,rotated,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_small_016.jpg,pkk_flag,positive,small,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_occluded_017.jpg,pkk_flag,positive,occluded,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_018.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_019.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_rotated_020.jpg,pkk_flag,positive,rotated,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_small_021.jpg,pkk_flag,positive,small,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_occluded_022.jpg,pkk_flag,positive,occluded,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_023.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/positive/pkk_flag_positive_on_photo_024.jpg,pkk_flag,positive,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_rotated_000.jpg,pkk_flag,hard_negative,rotated,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_small_001.jpg,pkk_flag,hard_negative,small,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_occluded_002.jpg,pkk_flag,hard_negative,occluded,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_003.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_004.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_rotated_005.jpg,pkk_flag,hard_negative,rotated,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_small_006.jpg,pkk_flag,hard_negative,small,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_occluded_007.jpg,pkk_flag,hard_negative,occluded,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_008.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_009.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_rotated_010.jpg,pkk_flag,hard_negative,rotated,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_small_011.jpg,pkk_flag,hard_negative,small,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_occluded_012.jpg,pkk_flag,hard_negative,occluded,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_013.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_014.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_rotated_015.jpg,pkk_flag,hard_negative,rotated,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_small_016.jpg,pkk_flag,hard_negative,small,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_occluded_017.jpg,pkk_flag,hard_negative,occluded,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_018.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_019.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_rotated_020.jpg,pkk_flag,hard_negative,rotated,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_small_021.jpg,pkk_flag,hard_negative,small,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_occluded_022.jpg,pkk_flag,hard_negative,occluded,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_023.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/pkk_flag/hard_negative/pkk_flag_hard_negative_on_photo_024.jpg,pkk_flag,hard_negative,on_photo,see data/licenses.csv
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_rotated_000.jpg,hezbollah_flag,positive,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_small_001.jpg,hezbollah_flag,positive,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_occluded_002.jpg,hezbollah_flag,positive,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_003.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_004.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_rotated_005.jpg,hezbollah_flag,positive,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_small_006.jpg,hezbollah_flag,positive,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_occluded_007.jpg,hezbollah_flag,positive,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_008.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_009.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_rotated_010.jpg,hezbollah_flag,positive,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_small_011.jpg,hezbollah_flag,positive,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_occluded_012.jpg,hezbollah_flag,positive,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_013.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_014.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_rotated_015.jpg,hezbollah_flag,positive,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_small_016.jpg,hezbollah_flag,positive,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_occluded_017.jpg,hezbollah_flag,positive,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_018.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_019.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_rotated_020.jpg,hezbollah_flag,positive,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_small_021.jpg,hezbollah_flag,positive,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_occluded_022.jpg,hezbollah_flag,positive,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_023.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/positive/hezbollah_flag_positive_on_photo_024.jpg,hezbollah_flag,positive,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_rotated_000.jpg,hezbollah_flag,hard_negative,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_small_001.jpg,hezbollah_flag,hard_negative,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_occluded_002.jpg,hezbollah_flag,hard_negative,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_003.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_004.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_rotated_005.jpg,hezbollah_flag,hard_negative,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_small_006.jpg,hezbollah_flag,hard_negative,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_occluded_007.jpg,hezbollah_flag,hard_negative,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_008.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_009.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_rotated_010.jpg,hezbollah_flag,hard_negative,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_small_011.jpg,hezbollah_flag,hard_negative,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_occluded_012.jpg,hezbollah_flag,hard_negative,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_013.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_014.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_rotated_015.jpg,hezbollah_flag,hard_negative,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_small_016.jpg,hezbollah_flag,hard_negative,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_occluded_017.jpg,hezbollah_flag,hard_negative,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_018.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_019.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_rotated_020.jpg,hezbollah_flag,hard_negative,rotated,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_small_021.jpg,hezbollah_flag,hard_negative,small,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_occluded_022.jpg,hezbollah_flag,hard_negative,occluded,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_023.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
+data/images/hezbollah_flag/hard_negative/hezbollah_flag_hard_negative_on_photo_024.jpg,hezbollah_flag,hard_negative,on_photo,"hand-drawn approximation, not the group's actual artwork - see shapes.py"
 data/images/easy_negative/easy_negative_000.jpg,none,easy_negative,random_shape,"synthetic (generated, no license needed)"
 data/images/easy_negative/easy_negative_001.jpg,none,easy_negative,random_shape,"synthetic (generated, no license needed)"
 data/images/easy_negative/easy_negative_002.jpg,none,easy_negative,random_shape,"synthetic (generated, no license needed)"

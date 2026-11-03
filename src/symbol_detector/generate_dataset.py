@@ -18,7 +18,16 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 from symbol_detector.backgrounds import random_background
-from symbol_detector.shapes import SIZE, SYMBOLS, plain_tricolor
+from symbol_detector.shapes import (
+    SIZE,
+    SYMBOLS,
+    hezbollah_flag_approx,
+    kurdistan_regional_flag,
+    palestinian_flag,
+    plain_black_flag,
+    plain_tricolor,
+    plain_yellow_flag,
+)
 
 OUT_DIR = Path("data/images")
 MANIFEST_PATH = Path("data/manifest.csv")
@@ -36,6 +45,27 @@ REAL_SYMBOLS: dict[str, dict[str, Callable[[], Image.Image]]] = {
         ),
         "hard_negative": plain_tricolor,
     },
+    "islamic_state_flag": {
+        "positive": lambda: Image.open(RAW_LICENSED_DIR / "islamic_state_flag" / "original.png").convert(
+            "RGBA"
+        ),
+        "hard_negative": plain_black_flag,
+    },
+    "hamas_flag": {
+        "positive": lambda: Image.open(RAW_LICENSED_DIR / "hamas_flag" / "original.png").convert("RGBA"),
+        "hard_negative": palestinian_flag,
+    },
+    "pkk_flag": {
+        "positive": lambda: Image.open(RAW_LICENSED_DIR / "pkk_flag" / "original.png").convert("RGBA"),
+        "hard_negative": kurdistan_regional_flag,
+    },
+}
+
+# Not sourced from anywhere - Hezbollah's actual flag/logo isn't freely licensed
+# on Commons (only a restricted non-free placeholder exists), so this is an
+# original hand-drawn approximation instead. See shapes.hezbollah_flag_approx.
+APPROX_SYMBOLS: dict[str, dict[str, Callable[[], Image.Image]]] = {
+    "hezbollah_flag": {"positive": hezbollah_flag_approx, "hard_negative": plain_yellow_flag},
 }
 
 COLORS = [(0, 0, 0), (255, 255, 255), (200, 0, 0), (0, 0, 150), (40, 40, 40)]
@@ -121,7 +151,11 @@ def main() -> None:
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     rows = []
 
-    sources = [(SYMBOLS, True, "synthetic (generated, no license needed)"), (REAL_SYMBOLS, False, None)]
+    sources = [
+        (SYMBOLS, True, "synthetic (generated, no license needed)"),
+        (REAL_SYMBOLS, False, None),
+        (APPROX_SYMBOLS, False, "hand-drawn approximation, not the group's actual artwork - see shapes.py"),
+    ]
     for symbol_dict, allow_recolor, fixed_source in sources:
         for symbol, kinds in symbol_dict.items():
             for label, builder in kinds.items():
