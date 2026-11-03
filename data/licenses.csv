@@ -1,0 +1,13 @@
+symbol,source,license,note
+swastika,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
+ss_runes,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
+black_sun,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
+odal_rune,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
+wolfsangel,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
+celtic_cross,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
+easy_negative,synthetic (generated in-code with PIL),none needed - original code-drawn shape,
+imperial_war_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code
+islamic_state_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code
+hamas_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code
+hezbollah_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code
+pkk_flag,NOT YET SOURCED,,needs a real licensed reference image (e.g. Wikimedia Commons) - too complex to draw accurately from code
