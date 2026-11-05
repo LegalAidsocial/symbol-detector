@@ -23,6 +23,7 @@ from symbol_detector.shapes import (
     SYMBOLS,
     hezbollah_flag_approx,
     kurdistan_regional_flag,
+    lebanese_flag,
     palestinian_flag,
     plain_black_flag,
     plain_tricolor,
@@ -38,7 +39,9 @@ EASY_NEGATIVES = 200
 # Real licensed reference images: symbol -> (positive image loader, hard negative builder).
 # Not recolored like the drawn line-art symbols - a real flag's colors are part of what
 # makes it that symbol, so changing them isn't a realistic augmentation.
-REAL_SYMBOLS: dict[str, dict[str, Callable[[], Image.Image]]] = {
+Builder = Callable[[], Image.Image]
+
+REAL_SYMBOLS: dict[str, dict[str, Builder | list[Builder]]] = {
     "imperial_war_flag": {
         "positive": lambda: Image.open(RAW_LICENSED_DIR / "imperial_war_flag" / "original.png").convert(
             "RGBA"
@@ -64,8 +67,11 @@ REAL_SYMBOLS: dict[str, dict[str, Callable[[], Image.Image]]] = {
 # Not sourced from anywhere - Hezbollah's actual flag/logo isn't freely licensed
 # on Commons (only a restricted non-free placeholder exists), so this is an
 # original hand-drawn approximation instead. See shapes.hezbollah_flag_approx.
-APPROX_SYMBOLS: dict[str, dict[str, Callable[[], Image.Image]]] = {
-    "hezbollah_flag": {"positive": hezbollah_flag_approx, "hard_negative": plain_yellow_flag},
+APPROX_SYMBOLS: dict[str, dict[str, Builder | list[Builder]]] = {
+    "hezbollah_flag": {
+        "positive": hezbollah_flag_approx,
+        "hard_negative": [lebanese_flag, plain_yellow_flag],
+    },
 }
 
 COLORS = [(0, 0, 0), (255, 255, 255), (200, 0, 0), (0, 0, 150), (40, 40, 40)]
@@ -158,30 +164,46 @@ def main() -> None:
     ]
     for symbol_dict, allow_recolor, fixed_source in sources:
         for symbol, kinds in symbol_dict.items():
-            for label, builder in kinds.items():
+            for label, builder_or_list in kinds.items():
                 folder = OUT_DIR / symbol / label
                 folder.mkdir(parents=True, exist_ok=True)
-                base = builder()
+                builders = builder_or_list if isinstance(builder_or_list, list) else [builder_or_list]
                 variant_kinds = (
                     ["rotated", "small", "occluded", "on_photo", "color"]
                     if allow_recolor
                     else ["rotated", "small", "occluded", "on_photo", "on_photo"]
                 )
                 source = fixed_source or "see data/licenses.csv"
-                for i in range(VARIANTS_PER_CLASS):
-                    kind = variant_kinds[i % len(variant_kinds)]
-                    out = make_variant(base, kind, allow_recolor=allow_recolor)
-                    fname = f"{symbol}_{label}_{kind}_{i:03d}.jpg"
-                    out.convert("RGB").save(folder / fname, quality=90)
-                    rows.append(
-                        {
-                            "path": str((folder / fname).as_posix()),
-                            "symbol": symbol,
-                            "label": label,
-                            "variant": kind,
-                            "source": source,
-                        }
-                    )
+                # Split this label's variant budget evenly across however many
+                # hard-negative builders it has, so every category gets real
+                # coverage instead of only the first one found.
+                base_count, remainder = divmod(VARIANTS_PER_CLASS, len(builders))
+                counts = [base_count + (1 if b < remainder else 0) for b in range(len(builders))]
+                i = 0
+                for base_idx, (builder, count) in enumerate(zip(builders, counts)):
+                    base = builder()
+                    # "group" ties every variant back to the one drawn image it
+                    # came from - split_dataset.py keeps a whole group on one
+                    # side of train/val/test, since they're correlated
+                    # (rotated/scaled/recolored copies of the same artwork),
+                    # not independent evidence of generalisation.
+                    group = f"{symbol}_{label}_{base_idx}"
+                    for _ in range(count):
+                        kind = variant_kinds[i % len(variant_kinds)]
+                        out = make_variant(base, kind, allow_recolor=allow_recolor)
+                        fname = f"{symbol}_{label}_{kind}_{i:03d}.jpg"
+                        out.convert("RGB").save(folder / fname, quality=90)
+                        rows.append(
+                            {
+                                "path": str((folder / fname).as_posix()),
+                                "symbol": symbol,
+                                "label": label,
+                                "variant": kind,
+                                "source": source,
+                                "group": group,
+                            }
+                        )
+                        i += 1
 
     neg_folder = OUT_DIR / "easy_negative"
     neg_folder.mkdir(parents=True, exist_ok=True)
@@ -196,11 +218,14 @@ def main() -> None:
                 "label": "easy_negative",
                 "variant": "random_shape",
                 "source": "synthetic (generated, no license needed)",
+                # each easy negative is independently randomised, not a
+                # transformed copy of a shared base - safe as its own group.
+                "group": f"easy_negative_{i:03d}",
             }
         )
 
     with MANIFEST_PATH.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["path", "symbol", "label", "variant", "source"])
+        writer = csv.DictWriter(f, fieldnames=["path", "symbol", "label", "variant", "source", "group"])
         writer.writeheader()
         writer.writerows(rows)
 
