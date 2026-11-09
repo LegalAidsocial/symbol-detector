@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 yolo_dataset/
+runs/
+yolov8n-cls.pt

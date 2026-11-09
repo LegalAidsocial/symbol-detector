@@ -6,11 +6,18 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "albumentations>=2.0.8",
+    "numpy>=2.0.0",
+    "onnxruntime>=1.20.0",
     "opencv-python-headless>=5.0.0.93",
     "pillow>=13.0.0",
     "reportlab>=5.1.0",
     "rlpycairo>=0.4.0",
     "svglib>=2.3.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
 ]
 
 [build-system]

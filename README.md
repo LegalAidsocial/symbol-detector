@@ -77,6 +77,46 @@ gets 125 positive images - more positive source material (beyond the 12
 symbols drawn/sourced so far) would materially help before training a real
 model on this.
 
+## Trained classifier (SCRUM-53)
+
+`yolov8n-cls`, trained on the dataset above, exported to ONNX for CPU
+inference (`models/symbol_classifier.onnx` + `models/symbol_classifier.names.json`).
+14 classes: the 12 banned symbols, `swastika_religious` (the upright,
+corner-dotted hard negative - reported as `needs_context`, never `banned`,
+per the brief), and `none`.
+
+**SCRUM-52's locked `manifest.csv` split can't be reused for this model**:
+it groups each symbol's 25 variants as one group (only one drawn/sourced
+artwork per symbol exists so far), so group-based splitting puts a whole
+class's images in only one of train/val/test - most classes were completely
+absent from train. `prepare_yolo_dataset.py` does its own stratified
+per-image split instead (manifest.csv and its locked split are untouched),
+so every class appears in train/val/test. Trade-off accepted deliberately:
+variants of the same base artwork can land in both train and test for
+single-source classes, inflating reported accuracy somewhat - unavoidable
+with only one real example per symbol today.
+
+Trained locally on CPU (yolov8n-cls is small enough that a GPU notebook,
+while still an option via `scripts/train_yolo_classifier.ipynb`, wasn't
+necessary): 38 epochs, early-stopped, best at epoch 23.
+
+- **Held-out test split**: 96.7% top1 accuracy, 100% top5 (123 images)
+- Verified end-to-end on real images via `classify_image.py`: a banned
+  swastika reports `banned` (99.8% confidence), the religious hard negative
+  reports `needs_context` (99.9998% confidence) - not `banned` - and an
+  unrelated image reports `clean`.
+
+```bash
+uv run python -m symbol_detector.prepare_yolo_dataset   # rebuild yolo_dataset/ from manifest.csv
+uv run python -m symbol_detector.classify_image path/to/image.jpg
+```
+
+**Known limitation carried over from SCRUM-52**: with only one real
+example per symbol, the train/test accuracy numbers above are optimistic -
+they include near-duplicate variants of the same base artwork on both
+sides. Real-world accuracy on genuinely new images will be lower until
+there's more positive source variety per symbol.
+
 ## What's still worth doing
 
 - Add more positive source variety - right now each symbol has exactly one
