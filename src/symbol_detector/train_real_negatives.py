@@ -17,10 +17,13 @@ deployed model and is deliberately left untouched pending a review decision).
 """
 
 import json
+import shutil
+from pathlib import Path
 
 from ultralytics import YOLO
 
 RUN_DIR = "runs/classify/runs_scrum142/yolov8n_cls_symbols_realneg"
+CANDIDATE_DIR = Path("models_candidate_scrum142")
 
 
 def main() -> None:
@@ -40,9 +43,11 @@ def main() -> None:
     print("top1 accuracy on fresh per-image split test:", test_metrics.top1)
     print("top5 accuracy on fresh per-image split test:", test_metrics.top5)
 
-    best.export(format="onnx", imgsz=224, opset=12, simplify=True)
+    onnx_path = best.export(format="onnx", imgsz=224, opset=12, simplify=True)
+    CANDIDATE_DIR.mkdir(exist_ok=True)
+    shutil.copy2(onnx_path, CANDIDATE_DIR / "symbol_classifier.onnx")
     names = best.names
-    with open("models_candidate_scrum142/symbol_classifier.names.json", "w") as f:
+    with open(CANDIDATE_DIR / "symbol_classifier.names.json", "w") as f:
         json.dump(names, f, indent=2)
     print(names)
 
