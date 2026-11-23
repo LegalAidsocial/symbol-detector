@@ -4,3 +4,11 @@ __pycache__/
 yolo_dataset/
 runs/
 yolov8n-cls.pt
+
+# SCRUM-142: real photos scraped from TikTok, used as hard-negative training
+# data - kept private/local-only (server 2 + this machine), never committed to
+# this public repo. manifest.csv references paths under here by design (see
+# the real_negative rows); prepare_yolo_dataset.py will FileNotFoundError on
+# them in a fresh clone unless this directory is populated locally first -
+# that's expected, not a bug. See the PR description for how to get the files.
+data/images/real_negative/
