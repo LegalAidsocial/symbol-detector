@@ -1,7 +1,20 @@
-"""SCRUM-57: run the trained classifier against SCRUM-52's locked test
-split (manifest.csv, split=="test" - 507 images, never used in training or
-validation) and report the three numbers the brief's done-when bar is
-measured on: precision/recall for "banned", and images/s on CPU.
+"""SCRUM-57: run the trained classifier against SCRUM-52's locked test split
+(manifest.csv, split=="test" - 507 images) and report precision/recall for
+"banned" and images/s on CPU.
+
+**This is NOT a true held-out evaluation - found by Hilda's cross-review,
+SCRUM-68.** manifest.csv's own "split" column is ignored by the training
+pipeline: prepare_yolo_dataset.py does its own fresh 70/15/15 per-image
+split across all 800 images (a deliberate, documented trade-off there, since
+only one base artwork exists per symbol), so roughly 70% of these same 507
+"test" rows are actually in the training set the model was trained on. The
+precision/recall this script reports is therefore inflated and should NOT
+be read as a real-world accuracy number - it's useful only as a smoke test
+(did training produce a model that fits its own training distribution at
+all) and for relative before/after comparisons where both runs share the
+same inflation. For an honest accuracy number on content the model has
+never seen, use evaluate_real_photos.py's output instead - that's the real
+headline metric.
 
 Ground truth verdict per row follows prepare_yolo_dataset.target_class's
 logic, restated in verdict terms:
@@ -125,6 +138,11 @@ def main() -> None:
         writer.writerows(failures)
 
     report = {
+        "CAVEAT": (
+            "precision/recall here are inflated - ~70% of these rows are also "
+            "in the training set (SCRUM-68). Use evaluate_real_photos.py for a "
+            "real accuracy number."
+        ),
         "n_test_images": len(rows),
         "precision_banned": round(precision, 4),
         "recall_banned": round(recall, 4),
