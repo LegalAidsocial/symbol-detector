@@ -9,7 +9,12 @@ instead of generalising to an unseen rendering. Each group goes to exactly
 one split.
 
 Locked test set requirement (SCRUM-52): 500+ images, at least half negative,
-never used for training. Within that floor, test is built negative-heavy
+never used for training. **This is the manifest's own split - the trained
+classifier ignores it.** prepare_yolo_dataset.py does its own fresh
+per-image split instead (a deliberate trade-off, since only one base
+artwork exists per symbol), so most of these "test" rows end up in the
+model's training set; see evaluate.py's docstring (SCRUM-68) for what that
+means for its reported numbers. Within that floor, test is built negative-heavy
 (targets 30% positive / 70% negative) on purpose - this dataset only has 300
 positive images total, so giving test a full 50/50 share would leave very
 few positives for training. The remainder (whatever positive/negative groups
