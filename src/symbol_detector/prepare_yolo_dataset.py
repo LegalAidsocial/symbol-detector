@@ -21,6 +21,14 @@ only one real/drawn example per symbol. manifest.csv and its locked split
 are left untouched for whatever else relies on them.
 
 Usage: uv run python -m symbol_detector.prepare_yolo_dataset
+
+Private images (SCRUM-68): 147 manifest rows (label=="real_negative",
+added by SCRUM-142) point at data/images/real_negative/, which is real
+photos of real people and is intentionally gitignored, not committed -
+ask Unity if you need them. A fresh clone is missing these files on
+purpose; this script skips any manifest row whose file isn't present
+on disk (prints how many per class) rather than failing, so a fresh
+clone still builds a usable (just smaller "none"-class) dataset.
 """
 
 import csv
@@ -72,8 +80,23 @@ def main() -> None:
         rows = list(csv.DictReader(f))
 
     by_class: dict[str, list[Path]] = {}
+    skipped: dict[str, int] = {}
     for row in rows:
-        by_class.setdefault(target_class(row), []).append(Path(row["path"]))
+        path = Path(row["path"])
+        cls = target_class(row)
+        if path.exists():
+            by_class.setdefault(cls, []).append(path)
+        else:
+            skipped[cls] = skipped.get(cls, 0) + 1
+
+    if skipped:
+        print(
+            f"Skipping {sum(skipped.values())} manifest rows whose image file "
+            "isn't on disk (private real_negative photos not in this clone - "
+            "see this script's docstring):"
+        )
+        for cls, n in sorted(skipped.items()):
+            print(f"  {cls}: {n}")
 
     counts: dict[str, int] = {}
     for cls, paths in sorted(by_class.items()):

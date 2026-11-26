@@ -42,6 +42,15 @@ negatives (unrelated shapes).
 Current output: **800 images, 300 positive / 500 negative** in
 `data/images/`, logged in `data/manifest.csv`.
 
+**`data/manifest.csv` also has 147 `real_negative` rows (SCRUM-142),
+whose image files are NOT in this clone.** They're real photos of real
+people (from Fahim's cleanup dataset, used as extra "none"-class training
+examples), gitignored on purpose at `data/images/real_negative/` - ask
+Unity if you need them for something. A fresh clone is missing these
+files by design; `prepare_yolo_dataset.py` skips any manifest row whose
+file isn't present on disk and prints how many, so it still builds a
+usable (just smaller "none"-class) dataset without them.
+
 ```bash
 uv sync
 uv run python -m symbol_detector.generate_dataset
