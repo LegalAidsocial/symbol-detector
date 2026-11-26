@@ -62,7 +62,12 @@ generalising). The script asserts no group ever crosses a split boundary,
 and fails loudly if it would.
 
 Locked test set requirement (SCRUM-52): 500+ images, at least half
-negative, never used for training. Current split:
+negative, never used for training. **This is the manifest's own split -
+the trained classifier ignores it.** `prepare_yolo_dataset.py` does its
+own fresh per-image split instead (a deliberate trade-off, see below), so
+most of these "test" rows are actually in the model's training set; see
+`evaluate.py`'s docstring (SCRUM-68) for what that means for its reported
+numbers. Current split:
 
 - **train**: 246 images (125 positive, 121 negative)
 - **val**: 47 images (25 positive, 22 negative)
