@@ -6,14 +6,21 @@ run for a fair before/after comparison.
 
 Usage (from repo root):
     uv run python -m symbol_detector.prepare_yolo_dataset
-    uv run --with ultralytics --with onnx --with onnxruntime python -m symbol_detector.train_real_negatives
+    uv run --group training python -m symbol_detector.train_real_negatives
 
 Ultralytics ignores a relative `project=` value's exact placement and always
 nests it under runs/<task>/ - actual output lands at
 runs/classify/runs_scrum142/yolov8n_cls_symbols_realneg/weights/{best.pt,best.onnx}.
 `runs/` is gitignored; the exported ONNX + names.json used for evaluation are
-copied to models_candidate_scrum142/ (NOT models/ - that dir is the currently
-deployed model and is deliberately left untouched pending a review decision).
+copied to CANDIDATE_DIR, a staging directory separate from models/ (the
+currently deployed model) - promoting a candidate into models/ is a
+deliberate, separate step, never done automatically by this script.
+
+This round's candidate (models_candidate_scrum142/) was reviewed and
+promoted into models/ on 26 Nov (see dsa-moderation-monitor PR #14,
+merged 23 Nov, which already deployed it to the live service) - update
+CANDIDATE_DIR's name for the next retraining round rather than reusing
+this one.
 """
 
 import json
