@@ -1,12 +1,13 @@
-"""SCRUM-142: evaluate a model (default: the models_candidate_scrum142/
-retrained one) against a directory of real photos, reporting the verdict
-breakdown. Used to measure the real-photo false-positive rate the way
-evaluate.py measures the locked synthetic test set - but this one has no
-ground-truth labels (real photos pulled from Fahim's cleanup dataset, not a
-curated positive/negative set), so it only reports the resulting verdict
+"""SCRUM-142: evaluate a model (default: models/, the currently deployed
+one) against a directory of real photos, reporting the verdict breakdown.
+Used to measure the real-photo false-positive rate the way evaluate.py
+measures the locked synthetic test set - but this one has no ground-truth
+labels (real photos pulled from Fahim's cleanup dataset, not a curated
+positive/negative set), so it only reports the resulting verdict
 counts/rate, not precision/recall.
 
-Usage: uv run python -m symbol_detector.evaluate_real_photos <image_dir> [--model path] [--names path]
+Needs the `training` dependency group (for pillow_heif):
+    uv run --group training python -m symbol_detector.evaluate_real_photos <image_dir> [--model path] [--names path]
 """
 
 import argparse
@@ -19,8 +20,8 @@ from symbol_detector.classify_image import load_names, preprocess, verdict_for
 
 pillow_heif.register_heif_opener()
 
-DEFAULT_MODEL = Path("models_candidate_scrum142/symbol_classifier.onnx")
-DEFAULT_NAMES = Path("models_candidate_scrum142/symbol_classifier.names.json")
+DEFAULT_MODEL = Path("models/symbol_classifier.onnx")
+DEFAULT_NAMES = Path("models/symbol_classifier.names.json")
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif"}
 
 

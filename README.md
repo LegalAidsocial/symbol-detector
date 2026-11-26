@@ -117,6 +117,39 @@ they include near-duplicate variants of the same base artwork on both
 sides. Real-world accuracy on genuinely new images will be lower until
 there's more positive source variety per symbol.
 
+### Retrained with real-photo hard negatives (SCRUM-142)
+
+The SCRUM-53 model above, trained entirely on synthetic/single-source
+drawn symbols, had never seen an ordinary real photo labelled "clean" -
+on a real-world sample it returned `banned` 74-88.9% of the time
+(confirmed false positives: a greeting card, a parked SUV, memes, an
+optical-illusion photo, all at 99%+ confidence). The fix: 147 real,
+hand-verified clean photos from Fahim's cleanup dataset, added as new
+`none`-class training examples (`data/manifest.csv` rows with
+`label=="real_negative"` - these image files are real photos of real
+people and are intentionally gitignored, not committed; ask Unity if you
+need to inspect them).
+
+| | Locked synthetic test set (507 img) | Real-photo holdout (63 img, never trained on) |
+|---|---|---|
+| Old (SCRUM-53) model | 100% / 99.3% (precision/recall) | 88.9% banned |
+| Retrained model | 100% / 99.3% (no regression) | **0% banned** |
+
+This is the model in `models/` today - reviewed and promoted from
+`models_candidate_scrum142/` on 26 Nov (already live in
+`dsa-moderation-monitor`'s deployed service since PR #14, merged 23 Nov).
+`symbol_classifier.names.json` is unchanged - same 14 classes, same order.
+
+Retraining or evaluating against new photos needs the `training`
+dependency group (`ultralytics`, `onnx`, `pillow-heif` - not installed by
+a plain `uv sync`, since they're heavy and only needed for this):
+
+```bash
+uv run python -m symbol_detector.prepare_yolo_dataset               # no extra deps needed
+uv run --group training python -m symbol_detector.train_real_negatives
+uv run --group training python -m symbol_detector.evaluate_real_photos path/to/photos/
+```
+
 ## What's still worth doing
 
 - Add more positive source variety - right now each symbol has exactly one
